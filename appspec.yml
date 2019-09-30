@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /u01/app/apache/thepoundingfathers
+hooks:
+  AfterInstall:
+    - location: /root/scripts/afterinstall.sh
+      timeout: 300
+      runas: root
